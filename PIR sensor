@@ -1,0 +1,25 @@
+int val = 0;
+
+void setup(){
+//put your setup code here, to run once
+pinMode(12, OUTPUT);
+pinMode(2, INPUT);
+//pin 2 is used as input
+Serial.begin(9600);
+}
+
+void loop(){
+//put your main code here, to run repeatedly:
+val = digitalRead(2);
+if(val == HIGH)
+{
+digitalWrite(12, HIGH);
+delay(100);
+Serial.println("Motion detected");
+}
+else
+{
+digitalWrite(12, LOW);
+Serial.println("Motion not detected");
+}
+}
