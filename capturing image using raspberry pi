@@ -1,0 +1,6 @@
+For image:
+raspistill -o Desktop/img123.jpg
+raspistill -o Desktop/image11.jpg -w 1980 -h 360 # for setting the width & height
+
+For video:
+raspivid -o Desktop/video1.h264
